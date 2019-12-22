@@ -1,0 +1,18 @@
+<title>Employee Details</title>
+<br><br>
+<div style="margin-left: 40%"><b>Employee Details</b></div>
+<div *ngIf="employee">
+  <br>
+    <label for="id"><b>ID:</b></label>   
+    <span id="id">{{employee.id}} </span><br>
+    <label for="name"><b>Name:</b></label>
+    <span id="name">{{employee.name}}</span><br>
+    <label for="location"><b>Location:</b></label>
+    <span id="location">{{employee.location}}</span><br>
+    <label for="email"><b>Email: </b></label>
+    <span id="email">{{employee.email}}</span><br>
+    <label for="mobile"><b>Mobile:</b></label>
+    <span id="mobile">{{employee.mobile}}</span>
+    <hr>
+    <button id="back" (click)="goBack()" style="margin-left: 40%">Back</button>
+</div>

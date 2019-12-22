@@ -1,0 +1,7 @@
+p {
+  font-family: Lato;
+}
+a.activeLink{
+  color: blue;
+  font-weight: bold;
+}

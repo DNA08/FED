@@ -1,0 +1,28 @@
+<title>{{title}}</title>
+<h1>Employee Management System</h1><br>
+<style>
+  li{
+    float : left ;
+  }
+  li a{
+    padding:50px;
+  }
+  ul {
+    list-style-type: none;
+    margin:0%;
+    padding:0
+  }
+</style>
+<nav>
+  <ul>
+    <li><a routerLink='/employees' 
+    routerLinkActive= "activeLink"
+    [routerLinkActiveOptions]= "{exact: true}"
+     padding:10px>Employees List </a></li>
+    <li><a routerLink='/addEmployee'
+    routerLinkActive= "activeLink"
+    [routerLinkActiveOptions]= "{exact: true}"
+     >Add Employee </a><br></li>
+  </ul>
+<nav>
+  <router-outlet></router-outlet>

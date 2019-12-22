@@ -1,0 +1,31 @@
+<title>Edit Employee</title>
+<br><br>
+<div><b style="margin-left: 40%">Edit Employee</b></div>
+<br>
+<div> 
+<form *ngIf="employee" #editEmployee="ngForm" (ngSubmit)="save(editEmployee.value)">
+    <div>
+        <label for="name">Employee Name:</label>
+         <input [(ngModel)]="employee.name" name="name"type="text" id="name" minlength="3" required >
+    </div>
+    <div>
+        <label for="location">Location:</label>
+        <select  [(ngModel)]="employee.location" name="location" id="location" required>
+         <option value="Bangalore">Bangalore</option>
+         <option value="Chennai">Chennai</option>
+         <option value="Pune">Pune</option>
+         <option value="Hyderabad">Hyderabad</option>
+        </select>
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input [(ngModel)]="employee.email" name="email" type="email" id="email" required>
+    </div>
+    <div>
+        <label for="mobile">Mobile:</label>
+        <input  [(ngModel)]="employee.mobile"  name="mobile" type="tel" id="mobile" minlength="8" maxlength="10" required >
+    </div>
+    <br>
+    <button type="submit" id="edit" value="submit" [disabled]="!editEmployee.valid" style="margin-left: 40%">Update</button>
+</form>
+</div>
